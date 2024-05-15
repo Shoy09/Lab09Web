@@ -1,0 +1,15 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col" *ngFor="let image of images">
+    <div class="card h-100 bg-light">
+      <img class="card-img-top" [src]="image.url" alt="{{ image.title }}">
+      <div class="card-body">
+        <h3 class="card-title">{{ image.title }}</h3>
+        <h5>Descripción:</h5>
+        <p class="card-text">{{ image.description }}</p>
+      </div>
+      <div class="card-footer text-muted">
+        <small>Última actualización: {{ image.updatedAt | date:'dd/MM/yyyy' }}</small>
+      </div>
+    </div>
+  </div>
+</div>
